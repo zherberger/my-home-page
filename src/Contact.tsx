@@ -1,7 +1,12 @@
+import { Page, Stack } from "./components";
+
 export default function Contact() {
     return (
-        <div className='page contact'>
-            Please direct all inquiries to: <a href="mailto:zherberger@gmail.com">zherberger@gmail.com</a>
-        </div>
+        <Page>
+            <Stack direction="column" alignItems="center">
+                <p>Please direct all inquiries to:</p>
+                <a href="mailto:zherberger@gmail.com">zherberger@gmail.com</a>
+            </Stack>
+        </Page>
     )
 }

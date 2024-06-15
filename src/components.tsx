@@ -1,7 +1,26 @@
-import { BsGithub } from 'react-icons/bs';
+//import githubLogoBlack from './assets/GitHub_Logo.png';
+import githubLogoWhite from './assets/GitHub_Logo_White.png';
 import './components.css';
 import { FaTimes } from 'react-icons/fa';
 import { useCallback, useEffect } from 'react';
+import { BsGithub } from 'react-icons/bs';
+import Sidenav from './Sidenav';
+
+export function Page({
+    children
+} : {
+    children: JSX.Element | JSX.Element[]
+}) {
+    return (
+        <>
+        <Sidenav/>
+        <div className='page'>
+            
+            {children}
+        </div>
+        </>
+    )
+}
 
 export function Stack({
     direction = 'row',
@@ -32,8 +51,9 @@ export function Stack({
 
 export function GitHubLink({ url } : { url: string }) {
     return (
-        <a href={url} target="_blank">
-            <BsGithub className="github-link"/>
+        <a href={url} target="_blank" className="github-link">
+            <BsGithub/>
+            <img src={githubLogoWhite} alt="GitHub" />
         </a>
     );
 }

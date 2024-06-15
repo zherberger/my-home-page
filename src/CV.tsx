@@ -1,10 +1,10 @@
-import { Stack } from './components';
+import { Page, Stack } from './components';
 import safeBadge from './assets/safe6_badge.png';
 import solutionsArchitectBadge from './assets/solutions_architect_badge.png';
 
 export default function CV() {
     return (
-        <div className='page cv'>
+        <Page>
             <h2>Employment</h2>
             <hr/>
             <br/>
@@ -73,6 +73,6 @@ export default function CV() {
                 <b>Certified SAFe 6 Professional</b>
                 <div style={{marginLeft: "auto"}}>February 2024</div>
             </Stack>
-        </div>
+        </Page>
     )
 }

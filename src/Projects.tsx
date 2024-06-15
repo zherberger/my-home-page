@@ -1,4 +1,5 @@
-import { GitHubLink, Stack } from './components';
+import { GitHubLink, Page, Stack } from './components';
+import beadProPenguinOriginal from './assets/bead-pro-penguin-original.png';
 import beadProPenguinScreenshot from './assets/bead-pro-penguin-screenshot.png';
 import botn1 from './assets/botn-1.png';
 import botn2 from './assets/botn-2.png';
@@ -24,10 +25,10 @@ function Project({
                 spacing={1.5}
                 alignItems='center'
             >
+                <h2>{name}</h2>
                 <GitHubLink
                     url={url}
                 />
-                <h2>{name}</h2>
                 {
                     date ?
                     <h2 style={{marginLeft: "auto"}}>{date}</h2> : <></>
@@ -60,13 +61,13 @@ function Project({
 
 export default function Projects() {
     return (
-        <div className='page projects'>
+        <Page>
             <Project
                 name="Bead Pro"
                 url="https://github.com/zherberger/bead-pro"
                 description="Python program to match video game sprites to Perler bead colors."
                 date="2024"
-                images={[beadProPenguinScreenshot]}
+                images={[beadProPenguinOriginal, beadProPenguinScreenshot]}
             />
             <br/>
             <Project
@@ -76,6 +77,6 @@ export default function Projects() {
                 date="2023"
                 images={[botn1, botn2, botn3]}
             />
-        </div>
+        </Page>
     )
 }
