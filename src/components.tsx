@@ -1,36 +1,42 @@
-//import githubLogoBlack from './assets/GitHub_Logo.png';
 import githubLogoWhite from './assets/GitHub_Logo_White.png';
-import './components.css';
 import { FaTimes } from 'react-icons/fa';
-import { useCallback, useEffect } from 'react';
+import { useCallback, useContext, useEffect } from 'react';
 import { BsGithub } from 'react-icons/bs';
 import Sidenav from './Sidenav';
+import { ThemeProvider } from 'styled-components';
+import { ThemeContext } from './main';
+import { GlobalStyle, darkTheme, lightTheme } from './global-style';
 
 export function Page({
     children
 } : {
     children: JSX.Element | JSX.Element[]
 }) {
+    const themeContext = useContext(ThemeContext);
+    let theme = themeContext.theme === 'dark' ? darkTheme : lightTheme;
+
     return (
-        <>
-        <Sidenav/>
-        <div className='page'>
-            
-            {children}
-        </div>
-        </>
+        <ThemeProvider theme={theme}>
+            <GlobalStyle/>
+            <Sidenav/>
+            <div className='page'>
+                {children}
+            </div>
+        </ThemeProvider>
     )
 }
 
 export function Stack({
     direction = 'row',
     spacing,
+    padding,
     alignItems,
     justifyContent,
-    children
+    children,
 } : {
     direction?: 'row' | 'column',
     spacing?: number,
+    padding?: number,
     alignItems?: string,
     justifyContent?: string,
     children: JSX.Element | JSX.Element[]
@@ -42,7 +48,8 @@ export function Stack({
             gap: `${spacing}rem`,
             alignItems: alignItems,
             justifyContent: justifyContent,
-            width: "100%"
+            width: "100%",
+            padding:`${padding}rem`,
         }}>
             {children}
         </div>

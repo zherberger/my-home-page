@@ -3,6 +3,7 @@ import { FaBars } from 'react-icons/fa';
 import { useMediaQuery } from 'react-responsive';
 import { NavLink, useLocation } from 'react-router-dom';
 import { Dialog, Stack } from './components';
+import { ThemeSwitcher } from './ThemeSwitcher';
 
 export default function Sidenav() {
     const [showLinks, setShowLinks] = useState(false);
@@ -16,9 +17,9 @@ export default function Sidenav() {
 
     return (
         <div className='sidenav'>
+            <ThemeSwitcher/>
             {
                 screenIsSmall ?
-                
                 <>
                     <div className='sidenav-title'>{
                         pathname === '/' ? 'Zachary Herberger' :
