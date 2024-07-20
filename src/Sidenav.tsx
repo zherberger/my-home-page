@@ -5,7 +5,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 import { Dialog, Stack } from './components';
 import { ThemeSwitcher } from './ThemeSwitcher';
 
-export default function Sidenav() {
+export default function Topnav() {
     const [showLinks, setShowLinks] = useState(false);
     const screenIsSmall = useMediaQuery({ query: '(max-width: 768px)' });
     const { pathname } = useLocation();

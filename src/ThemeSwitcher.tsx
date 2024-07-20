@@ -8,7 +8,7 @@ export function ThemeSwitcher() {
 
     return (
         <div>
-            <Stack direction="row" spacing={1} alignItems="center">
+            <Stack direction="row" spacing={0.5} alignItems="center">
                 <FaMoon/>
                 <div
                     className="theme-switcher"

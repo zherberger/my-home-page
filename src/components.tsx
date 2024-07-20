@@ -2,7 +2,7 @@ import githubLogoWhite from './assets/GitHub_Logo_White.png';
 import { FaTimes } from 'react-icons/fa';
 import { useCallback, useContext, useEffect } from 'react';
 import { BsGithub } from 'react-icons/bs';
-import Sidenav from './Sidenav';
+import Topnav from './Sidenav';
 import { ThemeProvider } from 'styled-components';
 import { ThemeContext } from './main';
 import { GlobalStyle, darkTheme, lightTheme } from './global-style';
@@ -18,7 +18,7 @@ export function Page({
     return (
         <ThemeProvider theme={theme}>
             <GlobalStyle/>
-            <Sidenav/>
+            <Topnav/>
             <div className='page'>
                 {children}
             </div>
@@ -33,6 +33,7 @@ export function Stack({
     alignItems,
     justifyContent,
     children,
+    ...others
 } : {
     direction?: 'row' | 'column',
     spacing?: number,
@@ -40,6 +41,7 @@ export function Stack({
     alignItems?: string,
     justifyContent?: string,
     children: JSX.Element | JSX.Element[]
+    others?: any
 }) {
     return (
         <div style={{
@@ -50,6 +52,7 @@ export function Stack({
             justifyContent: justifyContent,
             width: "100%",
             padding:`${padding}rem`,
+            ...others
         }}>
             {children}
         </div>

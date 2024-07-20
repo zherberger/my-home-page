@@ -38,14 +38,6 @@ export const GlobalStyle = createGlobalStyle`
         -moz-osx-font-smoothing: grayscale;
         overflow-x: hidden;
     }
-
-    body {
-        margin: 0;
-        display: flex;
-        flex-direction: row;
-        min-width: 320px;
-        min-height: 100vh;
-      }
       
       h1 {
         font-size: 3.2em;
@@ -70,6 +62,7 @@ export const GlobalStyle = createGlobalStyle`
         align-items: flex-start;
         justify-content: center;
         overflow-y: auto;
+        overflow-x: hidden;
       }
       
       .home {
@@ -91,11 +84,10 @@ export const GlobalStyle = createGlobalStyle`
         display: flex;
         justify-content: center;
         align-items: center;
-        min-width: 100vw;
         min-height: 5vh;
         position: sticky;
         top: 0;
-        padding: 0 1rem;
+        padding-left: 1rem;
       }
       
       .links-dialog {
