@@ -1,13 +1,13 @@
 import { useCallback, useState } from 'react';
 import { FaBars } from 'react-icons/fa';
-import { useMediaQuery } from 'react-responsive';
 import { NavLink, useLocation } from 'react-router-dom';
 import { Dialog, Stack } from './components';
 import { ThemeSwitcher } from './ThemeSwitcher';
+import { useScreenIsSmall } from './hooks';
 
 export default function Topnav() {
     const [showLinks, setShowLinks] = useState(false);
-    const screenIsSmall = useMediaQuery({ query: '(max-width: 768px)' });
+    const screenIsSmall = useScreenIsSmall();
     const { pathname } = useLocation();
 
     const onBarsClicked = useCallback((event : React.MouseEvent<HTMLElement>) => {
@@ -17,7 +17,6 @@ export default function Topnav() {
 
     return (
         <div className='sidenav'>
-            <ThemeSwitcher/>
             {
                 screenIsSmall ?
                 <>
@@ -34,12 +33,15 @@ export default function Topnav() {
                     <LinksDialog show={showLinks} setShow={setShowLinks}/> 
                 </>
                 :
-                <Stack justifyContent="center">
-                    <MyNavLink to='/'>Zachary Herberger</MyNavLink>
-                    <MyNavLink to='/projects'>Projects</MyNavLink>
-                    <MyNavLink to='/cv'>C.V.</MyNavLink>
-                    <MyNavLink to='/contact'>Contact</MyNavLink>
-                </Stack>
+                <>
+                    <ThemeSwitcher/>
+                        <Stack justifyContent="center">
+                        <MyNavLink to='/'>Zachary Herberger</MyNavLink>
+                        <MyNavLink to='/projects'>Projects</MyNavLink>
+                        <MyNavLink to='/cv'>C.V.</MyNavLink>
+                        <MyNavLink to='/contact'>Contact</MyNavLink>
+                    </Stack>
+                </>
             }
         </div>
     )
@@ -62,14 +64,30 @@ function MyNavLink({
 }
 
 function LinksDialog({show, setShow} : {show: boolean, setShow: (show: boolean) => void}) {
+    const screenIsSmall = useScreenIsSmall();
+
     return (
         <Dialog title="Navigation" show={show} setShow={setShow}>
-            <div style={{display: 'flex', flexDirection: 'column'}}>
-            <MyNavLink to='/'>Zachary Herberger</MyNavLink>
-            <MyNavLink to='/projects'>Projects</MyNavLink>
-            <MyNavLink to='/cv'>C.V.</MyNavLink>
-            <MyNavLink to='/contact'>Contact</MyNavLink>
-            </div>
+            <Stack direction='column'>
+                <MyNavLink to='/'>Zachary Herberger</MyNavLink>
+                <MyNavLink to='/projects'>Projects</MyNavLink>
+                <MyNavLink to='/cv'>C.V.</MyNavLink>
+                <MyNavLink to='/contact'>Contact</MyNavLink>
+                {
+                    screenIsSmall ?
+                    <div style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        padding: "0 1rem",
+                        alignItems: "center",
+                        justifyContent: "space-around",
+                    }}>
+                        <p>Theme:</p>
+                        <ThemeSwitcher/>
+                    </div> :
+                    <></>
+                }
+            </Stack>
         </Dialog>
     )
 }

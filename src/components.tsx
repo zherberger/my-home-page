@@ -79,8 +79,10 @@ export function Dialog({
     setShow: (show: boolean) => void,
     children: JSX.Element | JSX.Element[]
 }) {
-    const windowListener = useCallback(() => {
-        setShow(false);
+    const windowListener = useCallback((e) => {
+        if(!e?.target?.className?.includes('theme-switcher')) {
+            setShow(false);
+        }
     }, [])
 
     useEffect(() => {

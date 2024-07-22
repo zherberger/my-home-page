@@ -101,7 +101,6 @@ export const GlobalStyle = createGlobalStyle`
       }
       
       .sidenav-title {
-        padding: 0.5em 1em;
         font-weight: 700;
         color: var(--color);
       }
@@ -201,7 +200,7 @@ export const GlobalStyle = createGlobalStyle`
 
     .theme-switcher {
         background-color: ${(props) => props.theme.accentColor};
-        border: 1px solid ${(props) => props.theme.borderColor};
+        border: 1px solid ${(props) => props.theme.color};
         width: 25px;
         display: flex;
         align-items: center;
