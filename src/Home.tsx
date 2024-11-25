@@ -16,7 +16,7 @@ export default function Home() {
             <br/><br/>
             Originally from Fairmont, WV, I moved to Pittsburgh in 2024 in order to advance my career in software development.
             <br/><br/>
-            Check out some of my <Link to='/projects'>projects</Link>!
+            Check out some of my <Link className="link" to='/projects'>projects</Link>!
           </p>
         </div>
     </Page>

@@ -15,22 +15,28 @@ export default function CV() {
             </Stack>
             <ul>
                 <li>
-                    Work with a small team in order to maintain a high-volume data processing application
+                    Accomplish development in a Linux environment using modern IDEs like IntelliJ IDEA
                 </li>
                 <li>
-                    All development is accomplished in a Linux environment, using modern IDEs like IntelliJ IDEA
+                    Have gained valuable full-stack dev experience using tools like Java/Spring, React, Docker, and PostgreSQL (using the Spring Data JPA for secure database access)
                 </li>
                 <li>
-                    Valuable full-stack development experience working with tools like Java/Spring, React, Docker, and PostgreSQL (using the Spring Data JPA for secure database access)
+                    Automated testing with JUnit, Cypress, React Testing Library
                 </li>
                 <li>
-                    Automated testing with Gitlab Pipelines, JUnit, Cypress, React Testing Library
+                    Continuous deployment using Kubernetes, Gitlab CI/CD pipelines
+                </li>
+                <li>
+                    Employ Agile methodologies in day-to-day operations, e.g. daily Team Sync, writing user stories, demoing completed stories to Product Owner
                 </li>
             </ul>
             <b>Trivia Host</b>
-            <Stack>
+            <Stack
+                alignItems="flex-end"
+                justifyContent="space-between"
+            >
                 <div>Team Trivia WV</div>
-                <div style={{marginLeft: "auto"}}>October 2023 - July 2024</div>
+                <div>October 2023 - July 2024</div>
             </Stack>
             <ul>
                 <li>
@@ -43,16 +49,28 @@ export default function CV() {
             <h2>Education</h2>
             <hr/>
             <br/>
-                <b>Bachelor of Computer Science</b>
-                <Stack>
+            <Stack
+                alignItems="end"
+                justifyContent="space-between"
+            >
+                <div>
+                    <b>Bachelor of Computer Science</b>
                     <div>Fairmont State University, 2020</div>
-                    <p style={{marginLeft: "auto"}}>GPA: 3.81</p>
-                </Stack>
-                <b>Bachelor of Mathematics</b>
-                <Stack>
+                </div>
+                <div>GPA: 3.81</div>
+            </Stack>
+            <br/>
+            <Stack
+                alignItems="end"
+                justifyContent="space-between"
+            >
+                <div>
+                    <b>Bachelor of Mathematics</b>
                     <div>West Virginia University, 2017</div>
-                    <p style={{marginLeft: "auto"}}>GPA: 3.34</p>
-                </Stack>
+                </div>
+                <div>GPA: 3.34</div>
+            </Stack>
+            <br/>
             <h2>Certifications</h2>
             <hr/>
             <br/>
@@ -73,6 +91,8 @@ export default function CV() {
                 <b>Certified SAFe 6 Professional</b>
                 <div style={{marginLeft: "auto"}}>February 2024</div>
             </Stack>
+            <br/>
+            <br/>
         </Page>
     )
 }

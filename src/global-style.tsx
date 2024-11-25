@@ -1,19 +1,27 @@
 import { createGlobalStyle } from "styled-components"
 import normalize from "styled-normalize"
+import pghDark from "./assets/pgh-dark.png";
+import pghLight from "./assets/pgh-light.png";
+
+console.log(pghDark);
 
 export const lightTheme = {
-    backgroundImage: "url(\"src/assets/pgh-light.png\")",
+    backgroundImage: `url(${pghLight})`,
     backgroundColor: "#ffffff",
     accentColor: "#b0b9b9",
     borderColor: "#ccc",
+    linkColor: "#0000cc",
+    linkVisitedColor: "#551a8b",
     color: "#213547",
 }
 
 export const darkTheme = {
-    backgroundImage: "url('src/assets/pgh-dark.png')",
+    backgroundImage: `url(${pghDark})`,
     backgroundColor: "#242424",
     accentColor: "#121718",
     borderColor: "#444",
+    linkColor: "#00a0dd",
+    linkVisitedColor: "#a031dd",
     color: "white",
 }
 
@@ -37,6 +45,7 @@ export const GlobalStyle = createGlobalStyle`
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         overflow-x: hidden;
+        overflow-y: scroll;
     }
       
       h1 {
@@ -131,7 +140,15 @@ export const GlobalStyle = createGlobalStyle`
       .sidenav-link:hover {
         background-color: ${(props) => props.theme.borderColor};
       }
-      
+
+      .link {
+        color: ${(props) => props.theme.linkColor};
+      }
+
+      .link:visited {
+        color: ${(props) => props.theme.linkVisitedColor};
+      }
+
       hr {
         width: 100%;
       }

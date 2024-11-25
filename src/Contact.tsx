@@ -5,7 +5,7 @@ export default function Contact() {
         <Page>
             <Stack direction="column" alignItems="center">
                 <p>Please direct all inquiries to:</p>
-                <a href="mailto:zherberger@gmail.com">zherberger@gmail.com</a>
+                <a className="link" href="mailto:zherberger@gmail.com">zherberger@gmail.com</a>
             </Stack>
         </Page>
     )

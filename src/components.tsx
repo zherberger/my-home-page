@@ -1,6 +1,6 @@
 import githubLogoWhite from './assets/GitHub_Logo_White.png';
 import { FaTimes } from 'react-icons/fa';
-import { useCallback, useContext, useEffect } from 'react';
+import { useContext, useEffect } from 'react';
 import { BsGithub } from 'react-icons/bs';
 import Topnav from './Sidenav';
 import { ThemeProvider } from 'styled-components';
@@ -68,6 +68,12 @@ export function GitHubLink({ url } : { url: string }) {
     );
 }
 
+function windowListener(e: any, setShow: (show: boolean) => void) {
+    if(!e?.target?.className?.includes('theme-switcher')) {
+        setShow(false);
+    }
+}
+
 export function Dialog({
     title,
     show,
@@ -79,17 +85,11 @@ export function Dialog({
     setShow: (show: boolean) => void,
     children: JSX.Element | JSX.Element[]
 }) {
-    const windowListener = useCallback((e) => {
-        if(!e?.target?.className?.includes('theme-switcher')) {
-            setShow(false);
-        }
-    }, [])
-
     useEffect(() => {
         if(show) {
-            window.addEventListener('click', windowListener);
+            window.addEventListener('click', (e) => windowListener(e, setShow));
         } else {
-            window.removeEventListener('click', windowListener);
+            window.removeEventListener('click', (e) => windowListener(e, setShow));
         }
     }, [show])
 
