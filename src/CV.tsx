@@ -8,14 +8,19 @@ export default function CV() {
             <h2>Employment</h2>
             <hr/>
             <br/>
-            <b>Software Developer</b>
-            <Stack>
-                <div>Leidos</div>
+            <Stack
+                alignItems="end"
+                justifyContent="space-between"
+            >
+                <div>
+                    <b>Software Developer</b>
+                    <div>Leidos</div>
+                </div>
                 <div style={{marginLeft: "auto"}}>May 2020 - Present</div>
             </Stack>
             <ul>
                 <li>
-                    Accomplish development in a Linux environment using modern IDEs like IntelliJ IDEA
+                    All development is in a Linux environment using modern IDEs like IntelliJ IDEA
                 </li>
                 <li>
                     Have gained valuable full-stack dev experience using tools like Java/Spring, React, Docker, and PostgreSQL (using the Spring Data JPA for secure database access)
@@ -30,12 +35,15 @@ export default function CV() {
                     Employ Agile methodologies in day-to-day operations, e.g. daily Team Sync, writing user stories, demoing completed stories to Product Owner
                 </li>
             </ul>
-            <b>Trivia Host</b>
+            <br/>
             <Stack
-                alignItems="flex-end"
+                alignItems="end"
                 justifyContent="space-between"
             >
-                <div>Team Trivia WV</div>
+                <div>
+                    <b>Trivia Host</b>
+                    <div>Team Trivia WV</div>
+                </div>
                 <div>October 2023 - July 2024</div>
             </Stack>
             <ul>
