@@ -1,9 +1,11 @@
+import React from "react";
 import { GitHubLink, Page, Stack } from './components';
 import beadProPenguinOriginal from './assets/bead-pro-penguin-original.png';
 import beadProPenguinScreenshot from './assets/bead-pro-penguin-screenshot.png';
 import botn1 from './assets/botn-1.png';
 import botn2 from './assets/botn-2.png';
 import botn3 from './assets/botn-3.png';
+import myHomePage from './assets/my-home-page.png';
 
 function Project({
     name,
