@@ -1,3 +1,4 @@
+import React from 'react';
 import { Page, Stack } from './components';
 import safeBadge from './assets/safe6_badge.png';
 import solutionsArchitectBadge from './assets/solutions_architect_badge.png';

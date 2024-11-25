@@ -1,3 +1,4 @@
+import React from 'react';
 import profilePic from './assets/zacharyherberger.jpg';
 import { Link } from 'react-router-dom';
 import { Page } from './components';

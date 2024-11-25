@@ -1,3 +1,4 @@
+import React from 'react';
 import { Page, Stack } from "./components";
 
 export default function Contact() {

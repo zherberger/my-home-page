@@ -1,3 +1,4 @@
+import React from 'react';
 import githubLogoWhite from './assets/GitHub_Logo_White.png';
 import { FaTimes } from 'react-icons/fa';
 import { useContext, useEffect } from 'react';
