@@ -18,7 +18,7 @@ export const lightTheme = {
 export const darkTheme = {
     backgroundImage: `url(${pghDark})`,
     backgroundColor: "#242424",
-    accentColor: "#121718",
+    accentColor: "#060a0b",
     borderColor: "#444",
     linkColor: "#00a0dd",
     linkVisitedColor: "#a031dd",
