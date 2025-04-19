@@ -93,7 +93,6 @@ export const GlobalStyle = createGlobalStyle`
         display: flex;
         justify-content: center;
         align-items: center;
-        min-height: 5vh;
         position: sticky;
         top: 0;
         padding-left: 1rem;

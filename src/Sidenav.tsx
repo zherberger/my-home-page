@@ -36,7 +36,7 @@ export default function Topnav() {
                 :
                 <>
                     <ThemeSwitcher/>
-                        <Stack justifyContent="center">
+                    <Stack justifyContent="center">
                         <MyNavLink to='/'>Zachary Herberger</MyNavLink>
                         <MyNavLink to='/projects'>Projects</MyNavLink>
                         <MyNavLink to='/cv'>C.V.</MyNavLink>
