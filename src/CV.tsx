@@ -17,14 +17,14 @@ export default function CV() {
                     <b>Software Developer</b>
                     <div>Leidos</div>
                 </div>
-                <div style={{marginLeft: "auto"}}>May 2020 - Present</div>
+                <div>May 2020 - June 2025</div>
             </Stack>
             <ul>
                 <li>
-                    All development is in a Linux environment using modern IDEs like IntelliJ IDEA
+                    All development was in a Linux environment using modern IDEs like IntelliJ IDEA
                 </li>
                 <li>
-                    Have gained valuable full-stack dev experience using tools like Java/Spring, React, Docker, and PostgreSQL (using the Spring Data JPA for secure database access)
+                    Gained valuable full-stack dev experience using tools like Java/Spring, React, Python, Docker, and PostgreSQL (using the Spring Data JPA for secure database access)
                 </li>
                 <li>
                     Automated testing with JUnit, Cypress, React Testing Library
@@ -33,7 +33,7 @@ export default function CV() {
                     Continuous deployment using Kubernetes, Gitlab CI/CD pipelines
                 </li>
                 <li>
-                    Employ Agile methodologies in day-to-day operations, e.g. daily Team Sync, writing user stories, demoing completed stories to Product Owner
+                    Employed Agile methodologies in day-to-day operations, e.g. daily Team Sync, writing user stories, demoing completed stories to Product Owner
                 </li>
             </ul>
             <br/>
@@ -74,7 +74,7 @@ export default function CV() {
                 justifyContent="space-between"
             >
                 <div>
-                    <b>Bachelor of Mathematics</b>
+                    <b>Bachelor(s) of Mathematics, Physics</b>
                     <div>West Virginia University, 2017</div>
                 </div>
                 <div>GPA: 3.34</div>

@@ -69,19 +69,18 @@ export default function Projects() {
     return (
         <Page>
             <Project
-                name="This Website"
-                url="https://github.com/zherberger/my-home-page"
-                description={"Woah, meta. I worked on this as a sort of \"capstone\" after completing my AWS Solutions Architect certification. It's hosted as a static webpage in S3 and delivered through CloudFront to ensure fast load times."}
-                date="2024"
-                images={themeContext.theme === "dark" ? [myHomePageLight] : [myHomePageDark]}
-            />
-            <br/>
-            <Project
                 name="Bead Pro"
                 url="https://github.com/zherberger/bead-pro"
                 description="Python program to match video game sprites to Perler bead colors."
                 date="2024"
                 images={[beadProPenguinOriginal, beadProPenguinScreenshot]}
+            />
+            <br/>
+            <Project
+                name="This Website"
+                url="https://github.com/zherberger/my-home-page"
+                description={"Woah, meta. I worked on this as a sort of \"capstone\" after completing my AWS Solutions Architect certification. It's hosted as a static webpage in S3 and delivered through CloudFront to ensure fast load times."}
+                date="2024"
             />
             <br/>
             <Project
